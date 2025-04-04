@@ -131,7 +131,7 @@ int main(int argc, char** argv) {
                 printf("Partition image extraction error");
                 exit(EXIT_FAILURE);
             }
-            printf("\r\t%02d%%", (uint64_t)100 - (uint64_t)100*dataSizeLeft/partHeaders[i]->partitionSize);
+            printf("\r\t%02lu%%", (uint64_t)100 - (uint64_t)100*dataSizeLeft/partHeaders[i]->partitionSize);
         }
         printf("\n");
         close(fd_new);
